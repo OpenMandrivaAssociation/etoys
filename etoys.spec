@@ -38,6 +38,7 @@ the Internet.
 
 %build
 autoreconf
+%define __libtoolize true
 %configure --exec_prefix=%{_prefix}/bin --datarootdir=%{_prefix}/share --datadir=%{_prefix}/share --bindir=%{_prefix}/bin
 make
 
