@@ -2,18 +2,18 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: etoys
-Version: 4.0.2332
+Version: 4.0.2340
 Release: %mkrel 1
 Summary: An educational tool for teaching children powerful ideas in compelling ways
 License: MIT/Apache
 Group: Graphical desktop/Other
 Url: http://squeakland.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/glucose/etoys/etoys-4.0.2332.tar.gz
+Source: http://download.sugarlabs.org/sources/sucrose/glucose/etoys/etoys-4.0.2340-2.tar.gz
 
-Patch: etoys-4.0.2332-sugar-etoys-desktop.patch
+Patch: etoys-4.0.2340-sugar-etoys-desktop.patch
 
-Requires: squeak-vm-olpc >= 3.10.3
+Requires: squeak-vm >= 3.10.3
 
 BuildRequires: autoconf  
 BuildRequires: automake  
@@ -34,7 +34,7 @@ in real-time, so many forms of immersive mentoring and play can be done over
 the Internet.
 
 %prep
-%setup -q -n etoys-4.0.2332
+%setup -q -n etoys-4.0.2340
 %patch -p1
 
 %build
