@@ -12,6 +12,7 @@ URL:		http://squeakland.org/
 License:	MIT/Apache
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+
 # git clone git://dev.laptop.org/git/projects/etoys
 # cd etoys
 # git archive --format=tar --prefix=etoys-4.1.2388/ da36a993bede5edc64ff444f45fdc67dcc7865c8 | bzip2 > etoys-4.1.2388.tar.bz2
@@ -19,10 +20,20 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # Changes to spec to match Mandriva environment and build system
 # Original spec (and changelog) in tarball or git checkout
 Source:		%{source}.tar.bz2
+
+# svn checkout -r 559 http://etoys.squeak.org/svn/trunk/Etoys Content
+# find Content -name .svn | xargs rm -rf
+# tar jcf Content.tar.bz2 Content
+#
+# Do not run svn to checkout extra files during build
+Source1:	Content.tar.bz2
+
 Group:		Development/Other
 Requires:	squeak-vm >= 3.10
 Requires:	shared-mime-info
 BuildRequires:	gettext
+
+Patch0:		etoys-4.1.2388-Content.patch
 
 %description
 Squeak Etoys was inspired by LOGO, PARC-Smalltalk, Hypercard,
@@ -33,7 +44,8 @@ and open source. It includes graphics, images, text, particles,
 presentations, web-pages, videos, sound and MIDI, etc.
 
 %prep
-%setup -n %{source}
+%setup -n %{source} -a 1
+%patch0 -p1
 
 %build
 ./autogen.sh --prefix=%{_prefix}
