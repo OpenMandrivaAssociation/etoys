@@ -1,13 +1,13 @@
 %define name    etoys
 %define version 4.1.2388
-%define release 1
+%define release %mkrel 1
 %define source  %{name}-%{version}
 
 Name:		%{name}
 Summary:	A media-rich model, game, and simulation construction kit and authoring tool
 Version:	%{version}
 Release:	%{release}
-Vendor:		Squeakland Foundation
+#Vendor:		Squeakland Foundation
 URL:		http://squeakland.org/
 License:	MIT/Apache
 BuildArch:	noarch
