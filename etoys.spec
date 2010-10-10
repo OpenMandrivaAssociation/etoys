@@ -19,7 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 # Changes to spec to match Mandriva environment and build system
 # Original spec (and changelog) in tarball or git checkout
 Source:		%{source}.tar.bz2
-Group:		Development/Languages
+Group:		Development/Other
 Requires:	squeak-vm >= 3.10
 Requires:	shared-mime-info
 BuildRequires:	gettext
