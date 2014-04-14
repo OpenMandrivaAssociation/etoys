@@ -14,7 +14,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:                %{source}.tar.gz
 
 Group:		Development/Other
-Requires:	squeak-vm >= 3.10
+Requires:	squeak-vm3 >= 3.10
 Requires:	shared-mime-info
 BuildRequires:	gettext
 
