@@ -1,6 +1,6 @@
 %define name    etoys
 %define version 5.0.2408
-%define release 1
+%define release 2
 %define source  %{name}-%{version}
 
 Name:		%{name}
