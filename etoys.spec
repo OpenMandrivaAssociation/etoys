@@ -1,17 +1,11 @@
-%define name    etoys
-%define version 5.0.2408
-%define release 3
-%define source  %{name}-%{version}
-
-Name:		%{name}
+Name:		etoys
 Summary:	A media-rich model, game, and simulation construction kit and authoring tool
-Version:	%{version}
-Release:	%{release}
+Version:	5.0.2408
+Release:	4
 URL:		http://squeakland.org/
 License:	MIT/Apache
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Source:                %{source}.tar.gz
+Source:         %{name}-%{version}.tar.gz
 
 Group:		Development/Other
 Requires:	squeak-vm >= 3.10
