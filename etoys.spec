@@ -2,7 +2,7 @@ Name:		etoys
 Summary:	A media-rich model, game, and simulation construction kit and authoring tool
 Version:	5.0.2408
 Release:	4
-URL:		http://squeakland.org/
+URL:		https://squeakland.org/
 License:	MIT/Apache
 BuildArch:	noarch
 Source:         %{name}-%{version}.tar.gz
